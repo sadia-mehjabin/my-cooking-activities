@@ -1,0 +1,11 @@
+.activity{
+    width: 300px;
+    height: 510px;
+    border: 1px solid gray;
+}
+.activity-name{
+
+}
+.btn-add-to-list{
+    width: 100%;
+}
