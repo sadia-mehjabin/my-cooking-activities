@@ -1,0 +1,19 @@
+import React from 'react';
+
+const data = () => {
+    const fakeData = [
+        {'name': 'fg', description: 'edg', Time: 'er', for: 'er', image: 'rt'},
+        {name: '', description: '', Time: '', for: '', image: ''},
+        {name: '', description: '', Time: '', for: '', image: ''},
+        {name: '', description: '', Time: '', for: '', image: ''},
+        {name: '', description: '', Time: '', for: '', image: ''},
+        {name: '', description: '', Time: '', for: '', image: ''}
+    ]
+    return (
+        <div>
+            
+        </div>
+    );
+};
+
+export default Data;
