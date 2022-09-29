@@ -1,6 +1,12 @@
 import React from 'react';
 
 const InfoCart = ({exerciseTime}) => {
+    
+    let total = 0;
+    for(const activity of exerciseTime){
+        console.log(activity);
+        total = total + activity.time;
+    }
     return (
         <div>
             <h2>Information</h2>
@@ -22,7 +28,7 @@ const InfoCart = ({exerciseTime}) => {
                     </div>
                 </div>
                 <h4>Exercise Detaile</h4>
-                <h5>Exercise Time :    {exerciseTime.length}</h5>
+                <h5>Activity Time :    {total}</h5>
                 <h5>Break Time :    </h5>
         </div>
     );
