@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
+import Toast from '../Toast/Toast';
 
 import './InfoCart.css'
 
 
 const InfoCart = ({exerciseTime}) => {
- 
+    const [addBreak, setAddBreak] = useState(0);
     // const [breakTime, setBreakTime] =  useState(0)
     const addToBreak = (id) => {
         localStorage.setItem('break', id)
         // localStorage.getItem("break")
-        
+        setAddBreak(id)
         
 
         }
@@ -30,7 +31,7 @@ const InfoCart = ({exerciseTime}) => {
                 </div>
                 <div className='info'>
                     <div>
-                        <p><spam>65</spam>kg
+                        <p>65 kg
                         </p>
                         <p>Weight</p>
                     </div>
@@ -39,7 +40,7 @@ const InfoCart = ({exerciseTime}) => {
                         <p>height</p>
                     </div>
                     <div>
-                        <p><spam>26</spam>yrs</p>
+                        <p>26 yrs</p>
                         <p>Age</p>
                     </div>
                 </div>
@@ -54,8 +55,8 @@ const InfoCart = ({exerciseTime}) => {
                 
                 <h4>Exercise Detail</h4>
                 <h5>Activity Time : {total} Minute</h5>
-                <h5>Break Time : {ab}</h5>
-                
+                <h5>Break Time : {addBreak}</h5>
+                <Toast></Toast>
                 
         </div>
     );

@@ -1,3 +1,8 @@
 .personal-info img{
     width: 100px;
 }
+.btn{
+    width: 52px;
+    height: 38px;
+    border-radius: 15px;
+}
