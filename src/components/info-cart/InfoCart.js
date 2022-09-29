@@ -6,13 +6,9 @@ import './InfoCart.css'
 
 const InfoCart = ({exerciseTime}) => {
     const [addBreak, setAddBreak] = useState(0);
-    // const [breakTime, setBreakTime] =  useState(0)
     const addToBreak = (id) => {
         localStorage.setItem('break', id)
-        // localStorage.getItem("break")
         setAddBreak(id)
-        
-
         }
     
     
@@ -20,12 +16,11 @@ const InfoCart = ({exerciseTime}) => {
     for(const activity of exerciseTime){
         total = total + activity.time;
     }
-    const ab = localStorage.getItem("break")
     return (
         <div>
             <h2>Information</h2>
                 <div className='personal-info'>
-                    <img src="gettyimages-1144044827-594x594.jpg" alt=""></img>
+                    <img src="gettyimages-1167253026-594x594.jpg" alt=""></img>
                     <h3>Sadia Mehjabin</h3>
                     <p>Dhaka, Bangladesh</p>
                 </div>
