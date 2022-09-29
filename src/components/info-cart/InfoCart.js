@@ -1,5 +1,6 @@
 import React from 'react';
 import Break from '../break/Break';
+import './InfoCart.css'
 
 
 const InfoCart = ({exerciseTime}) => {
@@ -11,7 +12,8 @@ const InfoCart = ({exerciseTime}) => {
     return (
         <div>
             <h2>Information</h2>
-                <div>
+                <div className='personal-info'>
+                    <img src="gettyimages-1144044827-594x594.jpg" alt=""></img>
                     <h3>Sadia Mehjabin</h3>
                     <p>Dhaka, Bangladesh</p>
                 </div>
@@ -30,6 +32,7 @@ const InfoCart = ({exerciseTime}) => {
                         <p>Age</p>
                     </div>
                 </div>
+                <h4>Add A Break</h4>
                 <Break fun='addtocart()'></Break>
                 <h4>Exercise Detaile</h4>
                 <h5>Activity Time : {total} Minute</h5>
