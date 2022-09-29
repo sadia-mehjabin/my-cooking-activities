@@ -7,6 +7,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
 }
+.information{
+    background-color: lightsalmon;
+}
 .info{
     background-color: lightgray;
     display: flex;
