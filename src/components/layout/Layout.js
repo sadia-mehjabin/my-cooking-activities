@@ -6,6 +6,7 @@ import './Layout.css'
 const Layout = () => {
     const [activities, setActivities] = useState([]);
     const [exerciseTime, setExerciseTime] = useState([])
+
     useEffect(() => {
         fetch('generated.json')
         .then(res => res.json())
@@ -13,7 +14,6 @@ const Layout = () => {
     },[])
 
     const addToCartHandler = (activity) => {
-        console.log(activity)
         const newTime = [...exerciseTime, activity];
         setExerciseTime(newTime)
         console.log()
@@ -33,5 +33,9 @@ const Layout = () => {
         </div>
     );
 };
+
+const breakTimeHandler = (props) =>{
+    console.log(props);
+}
 
 export default Layout;
