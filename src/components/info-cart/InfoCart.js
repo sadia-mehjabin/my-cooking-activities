@@ -4,19 +4,22 @@ import './InfoCart.css'
 
 
 const InfoCart = ({exerciseTime}) => {
-    const [breakTime, setBreakTime] =  useState(0)
+ 
+    // const [breakTime, setBreakTime] =  useState(0)
     const addToBreak = (id) => {
         localStorage.setItem('break', id)
-         
+        // localStorage.getItem("break")
+        
+        
 
         }
     
-    let a = 0;
     
     let total = 0;
     for(const activity of exerciseTime){
         total = total + activity.time;
     }
+    const ab = localStorage.getItem("break")
     return (
         <div>
             <h2>Information</h2>
@@ -44,14 +47,16 @@ const InfoCart = ({exerciseTime}) => {
                 <div className='buttons'>
                     <button className='btn' onClick={()=> addToBreak(10)}>10</button>
                     <button className='btn' onClick={()=> addToBreak(20)}>20</button>
-                    <button className='btn' >30</button>
-                    <button className='btn' >40</button>
-                    <button className='btn' >50</button>
+                    <button className='btn' onClick={()=> addToBreak(30)}>30</button>
+                    <button className='btn' onClick={()=> addToBreak(40)}>40</button>
+                    <button className='btn' onClick={()=> addToBreak(50)}>50</button>
                 </div>
                 
                 <h4>Exercise Detail</h4>
                 <h5>Activity Time : {total} Minute</h5>
-                <h5>Break Time : {setBreakTime}</h5>
+                <h5>Break Time : {ab}</h5>
+                
+                
         </div>
     );
 };
