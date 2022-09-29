@@ -34,8 +34,6 @@ const Layout = () => {
     );
 };
 
-const breakTimeHandler = (props) =>{
-    console.log(props);
-}
+
 
 export default Layout;

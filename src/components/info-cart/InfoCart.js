@@ -1,9 +1,17 @@
-import React from 'react';
-import Break from '../break/Break';
+import React, { useState } from 'react';
+
 import './InfoCart.css'
 
 
 const InfoCart = ({exerciseTime}) => {
+    const [breakTime, setBreakTime] =  useState(0)
+    const addToBreak = (id) => {
+        localStorage.setItem('break', id)
+         
+
+        }
+    
+    let a = 0;
     
     let total = 0;
     for(const activity of exerciseTime){
@@ -33,10 +41,17 @@ const InfoCart = ({exerciseTime}) => {
                     </div>
                 </div>
                 <h4>Add A Break</h4>
-                <Break fun='addtocart()'></Break>
-                <h4>Exercise Detaile</h4>
+                <div className='buttons'>
+                    <button className='btn' onClick={()=> addToBreak(10)}>10</button>
+                    <button className='btn' onClick={()=> addToBreak(20)}>20</button>
+                    <button className='btn' >30</button>
+                    <button className='btn' >40</button>
+                    <button className='btn' >50</button>
+                </div>
+                
+                <h4>Exercise Detail</h4>
                 <h5>Activity Time : {total} Minute</h5>
-                <h5>Break Time : {}</h5>
+                <h5>Break Time : {setBreakTime}</h5>
         </div>
     );
 };
